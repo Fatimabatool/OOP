@@ -1,0 +1,253 @@
+2.16: Write a program that asks the user to enter two numbers, obtains the two
+numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int num1,num2,sum,product;
+	int difference,quotient;
+	cout<<"Enter two Numbers";
+	cin>>num1>>num2;
+	sum=num1+num2;
+	cout<<"Sum is :"<<sum<<endl;
+	
+	product=num1*num2;
+	cout<<"Product is :"<<product<<endl;
+	
+    difference=num1-num2;
+    cout<<"Difference is: "<<difference<<endl;
+ 
+    if(num2!=0){
+    quotient=(float)num1/num2;
+    cout<<"Quotient is: "<<quotient<<endl;
+}
+	
+	
+	
+	return 0;
+}
+
+2.17: Write a program that prints the numbers 1 to 4 on the same line with each pair
+of adjacent numbers separated by one space. Do this several ways:
+a) Using one statement with one stream insertion operator.
+b) Using one statement with four stream insertion operators.
+c) Using four statements.
+#include <iostream>
+using namespace std;
+int main()
+
+{
+	//a
+	cout<<" 1 2 3 4\n";
+	//b
+	cout<<" 1"<<" 2"<<" 3"<<" 4\n";
+	//c
+	cout<<" 1";
+	cout<<" 2";
+	cout<<" 3";
+	cout<<" 4"<<endl;
+	return 0;
+}
+
+2.18: Write a program that asks the user to enter two integers, obtains the
+numbers from the user, then prints the larger number followed by the words "is larger." If the
+numbers are equal, print the message "These numbers are equal."
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num1,num2;
+	
+	cout<<"Enter two Numbers";
+	cin>>num1>>num2;
+	
+	if(num1==num2)
+	cout<<"These numbers are equal"<<endl;
+	
+	if(num1>num2)
+	cout<<num1<<"is Larger"<<endl;
+	
+	if(num2>num1)
+	cout<<num2<<"is Larger"<<endl;
+	
+	return 0;
+}
+2.19:  Write a program that inputs three integers from the keyboard and prints the sum, average, product, smallest and largest of these numbers.
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+ int num1, num2, num3, smallest, largest; 
+
+ cout << "Input three different integers: ";
+ cin >> num1 >> num2 >> num3;
+
+ largest = num1;
+
+ if ( num2 > largest ) 
+ largest = num2;
+
+ if ( num3 > largest )
+ largest = num3;
+
+ smallest = num1; 
+
+ if ( num2 < smallest )
+ smallest = num2;
+
+ if ( num3 < smallest )
+ smallest = num3;
+
+ cout << "Sum is " << num1 + num2 + num3
+ << "\nAverage is " << (num1 + num2 + num3) / 3
+ << "\nProduct is " << num1 * num2 * num3
+ << "\nSmallest is " << smallest
+ << "\nLargest is " << largest << endl;
+
+ return 0;
+ }
+ 2.20: Write a program that reads in the radius of
+a circle as an integer and prints the circle’s diameter, circumference and area. Use the constant value
+3.14159 for π. Do all calculations in output statements
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ float radius; // declaration
+
+ cout << "Enter the circle radius: "; // prompt
+ cin >> radius;
+
+ cout << "Diameter is " << radius * 2.0
+ << "\nCircumference is " << 2 * 3.14159 * radius
+ << "\nArea is " << 3.14159 * radius * radius << endl;
+
+ return 0;
+ }
+2.21: ) Write a program that prints a box, an oval, an arrow and
+a diamond as follows:
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	cout<<endl<<"\t****""\t*""           *""          *"<<endl;
+	cout<<"\t*\t*""     ""     *""         **""       *   *"     <<endl;
+	cout<<"\t*\t*""    ""       *""       **""     *     *"        <<endl;
+	cout<<"\t*\t*""    ""       *""      ****""   *       *"          <<endl;
+	cout<<"\t*\t*""    *""       *""         *""       *     *"        <<endl;
+	cout<<"\t*\t*""    *""       *""         *""        *   *"         <<endl;
+	cout<<"\t*\t*""     *""     *""          *""         * *"         <<endl;
+	
+	cout<<"\t****""       ***""           *""          *";
+
+
+
+}
+2.22: What does the following code print?
+cout << "*\n**\n***\n****\n*****" << endl;
+
+*
+**
+***
+****
+*****
+2.24: Write a program that reads an integer and determines and prints whether
+it’s odd or even. [Hint: Use the modulus operator. An even number is a multiple of two. Any multiple of two leaves a remainder of zero when divided by 2.]
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ float radius; // declaration
+
+ cout << "Enter the circle radius: "; // prompt
+ cin >> radius;
+
+ cout << "Diameter is " << radius * 2.0
+ << "\nCircumference is " << 2 * 3.14159 * radius
+ << "\nArea is " << 3.14159 * radius * radius << endl;
+
+ return 0;
+ }
+ 2.25: Write a program that reads in two integers and determines and prints if the first
+is a multiple of the second. [Hint: Use the modulus operator.]
+#include <iostream>
+using namespace std;
+int main(){
+	int a,b ;
+	cout<<"Enter Number One";
+	cin>>a;
+	cout<<"Enter Number two";
+	cin>>b;
+	if(a%b==0){
+	
+	cout<<a<<" is multiple of "<<b;}
+	if(a%b!=0){
+		cout<<a<<" is not multiple of"<<b;
+	}
+	
+	
+	return 0;
+}
+2.26: ) Display the following checkerboard pattern with eight output
+statements, then display the same pattern using as few statements as possible.
+#include <iostream>
+using namespace std;
+int main(){
+	cout<<"\t* * * * * * * *"<<endl;
+	cout<<"         * * * * * * * *"<<endl;
+	cout<<"\t* * * * * * * *"<<endl;
+	cout<<"         * * * * * * * *"<<endl;
+	cout<<"\t* * * * * * * *"<<endl;
+	cout<<"         * * * * * * * *"<<endl;
+	cout<<"\t* * * * * * * *"<<endl;
+	cout<<"         * * * * * * * *"<<endl;
+	
+	
+	
+	
+	
+	return 0;
+}
+2.27: Write a
+program that prints the integer equivalent of a character typed at the keyboard. Store the input in a
+variable of type char. Test your program several times using uppercase letters, lowercase letters, digits and special characters (like $).
+#include <iostream>
+using namespace std;
+int main(){
+	char ch;
+	cout<<"Enter any Character";
+	cin>>ch;
+	cout<<static_cast < int > (ch);	
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}
+2.29: Using the techniques of this chapter, write a program that calculates the squares and
+cubes of the integers from 0 to 10. Use tabs to print the following neatly formatted table of values:
+#include <iostream>
+using namespace std;
+int main(){
+	int a;
+	cout<<"Enter a number ";
+	cin>>a;
+	cout<<"Integer"<<"\tSquare"<<"\tCube"<<endl;
+	for( int i=0; i<a; i++)
+	{
+		cout<<i<<"\t"<<"  "<<i*i<<"       "<<i*i*i<<endl;
+		
+	
+	}
+
+ return 0;
+ }
