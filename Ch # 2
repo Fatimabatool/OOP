@@ -1,28 +1,20 @@
 2.16: Write a program that asks the user to enter two numbers, obtains the two
 numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
+
 #include <iostream>
 using namespace std;
-int main()
-{
-	int num1,num2,sum,product;
-	int difference,quotient;
-	cout<<"Enter two Numbers";
-	cin>>num1>>num2;
-	sum=num1+num2;
-	cout<<"Sum is :"<<sum<<endl;
-	
-	product=num1*num2;
-	cout<<"Product is :"<<product<<endl;
-	
-    difference=num1-num2;
-    cout<<"Difference is: "<<difference<<endl;
- 
-    if(num2!=0){
-    quotient=(float)num1/num2;
-    cout<<"Quotient is: "<<quotient<<endl;
-}
-	
-	
+int main(){
+	int sum,product,difference;
+	int a,b,quotient;
+	cout<<"Enter Two Numbers = ";
+	cin>>a>>b;
+	sum=a+b;
+	product=a*b;
+	difference=a-b;
+	cout<<"Sum is : "<<sum<<endl<<"Product is : "<<product<<endl<<"Difference is : "<<difference<<endl;
+	if(b!=0){
+    quotient=(float)a/b;
+    cout<<"Quotient is: "<<quotient<<endl;}
 	
 	return 0;
 }
@@ -52,61 +44,63 @@ int main()
 2.18: Write a program that asks the user to enter two integers, obtains the
 numbers from the user, then prints the larger number followed by the words "is larger." If the
 numbers are equal, print the message "These numbers are equal."
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main()
-{
-	int num1,num2;
+int main(){
 	
-	cout<<"Enter two Numbers";
-	cin>>num1>>num2;
+	int a,b;
+	cout<<"Enter your first Number : ";
+	cin>>a;
+	cout<<"Enter your second Number : ";
+	cin>>b;
+	if(a>b){
+		cout<<a<<" is Larger Number"<<endl;
+	}
+	if(b>a){
+		cout<<b<<" is Larger Number"<<endl;
+	}
 	
-	if(num1==num2)
-	cout<<"These numbers are equal"<<endl;
-	
-	if(num1>num2)
-	cout<<num1<<"is Larger"<<endl;
-	
-	if(num2>num1)
-	cout<<num2<<"is Larger"<<endl;
-	
+	if(b==a){
+		cout<<" These numbers are equal";
+	}
+
 	return 0;
 }
 2.19:  Write a program that inputs three integers from the keyboard and prints the sum, average, product, smallest and largest of these numbers.
 #include <iostream>
 using namespace std;
-
-int main()
- {
- int num1, num2, num3, smallest, largest; 
-
- cout << "Input three different integers: ";
- cin >> num1 >> num2 >> num3;
-
- largest = num1;
-
- if ( num2 > largest ) 
- largest = num2;
-
- if ( num3 > largest )
- largest = num3;
-
- smallest = num1; 
-
- if ( num2 < smallest )
- smallest = num2;
-
- if ( num3 < smallest )
- smallest = num3;
-
- cout << "Sum is " << num1 + num2 + num3
- << "\nAverage is " << (num1 + num2 + num3) / 3
- << "\nProduct is " << num1 * num2 * num3
- << "\nSmallest is " << smallest
- << "\nLargest is " << largest << endl;
-
- return 0;
- }
+int main(){
+	int sum,product,avg;
+	int a,b,c;
+	cout<<"Enter three integers : ";
+	cin>>a>>b>>c;
+	sum=a+b+c;
+	cout<<"Sum is "<<sum<<endl;
+	product=a*b*c;
+	cout<<"product is "<<product<<endl;
+	avg=(a+b+c)/3;
+	cout<<"average is "<<avg<<endl;
+	if((a<b)&&(a<c)){
+		cout<<"Smallest is "<<a<<endl;
+	}
+		if((b<a)&&(b<c)){
+		cout<<"Smallest is "<<b<<endl;
+	}
+		if((c<a)&&(c<b)){
+		cout<<"Smallest is "<<c<<endl;
+	}
+	if((a>b)&&(a>c)){
+		cout<<"Largest is "<<a<<endl;
+	}
+		if((b>a)&&(b>c)){
+		cout<<"Largest is "<<b<<endl;
+	}
+		if((c>a)&&(c>b)){
+		cout<<"Largest is "<<c<<endl;
+	}
+	
+	return 0;
+}
  2.20: Write a program that reads in the radius of
 a circle as an integer and prints the circle’s diameter, circumference and area. Use the constant value
 3.14159 for π. Do all calculations in output statements
@@ -158,42 +152,37 @@ cout << "*\n**\n***\n****\n*****" << endl;
 2.24: Write a program that reads an integer and determines and prints whether
 it’s odd or even. [Hint: Use the modulus operator. An even number is a multiple of two. Any multiple of two leaves a remainder of zero when divided by 2.]
 #include <iostream>
-
 using namespace std;
-
-int main()
-{
- float radius; // declaration
-
- cout << "Enter the circle radius: "; // prompt
- cin >> radius;
-
- cout << "Diameter is " << radius * 2.0
- << "\nCircumference is " << 2 * 3.14159 * radius
- << "\nArea is " << 3.14159 * radius * radius << endl;
-
- return 0;
- }
+int main(){
+	int a;
+	cout<<"Enter your Number ";
+	cin>>a;
+	if(a%2==0){
+		cout<<a<<" is even"<<endl;
+	}
+	if(a%2!=0){
+		cout<<a<<" is odd"<<endl;
+	}
+	return 0;
+}
  2.25: Write a program that reads in two integers and determines and prints if the first
 is a multiple of the second. [Hint: Use the modulus operator.]
+
 #include <iostream>
 using namespace std;
 int main(){
-	int a,b ;
-	cout<<"Enter Number One";
-	cin>>a;
-	cout<<"Enter Number two";
-	cin>>b;
+	int a,b;
+	cout<<"enter your integers ";
+	cin>>a>>b;
 	if(a%b==0){
-	
-	cout<<a<<" is multiple of "<<b;}
-	if(a%b!=0){
-		cout<<a<<" is not multiple of"<<b;
+		cout<<a<<" is multiple of "<<b<<endl;
 	}
-	
-	
+	if(a%b!=0){
+		cout<<a<<" is not multiple of "<<b<<endl;
+	}
 	return 0;
 }
+
 2.26: ) Display the following checkerboard pattern with eight output
 statements, then display the same pattern using as few statements as possible.
 #include <iostream>
