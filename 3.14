@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+class Employee{
+	private:
+	string fname;
+	string lname;
+	double bal;
+	public:
+		//constructor
+		Employee(string f, string l, double m){
+			fname=f;
+			lname=l;
+			if(bal < 0){ 
+            bal =0;
+            }
+            else{
+            bal = m;	
+			} 
+            }
+            void getpart(){
+
+        cout<</*"Account Number:"<<account_number<<*/"First Name:"<<fname<<"\nLast Name:"<<lname<<"\nBalance:"<<bal<<endl;
+
+        }
+
+
+        };
+            
+            
+    int main(){
+	string fname;
+	string lname;
+	double bal;
+	
+	cout<<"Enter your First Name : ";
+	cin>>fname;
+	cout<<"Enter your Second Name : ";
+	cin>>lname;
+	cout<<"Enter your balance : ";
+	cin>>bal;
+	
+	Employee emp(  fname, lname, bal);
+	
+
+    emp.getpart();
+	
+	return 0;
+}
+		
+		
