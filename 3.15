@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class DateClass{
+	private:
+		int month;
+		int day;
+		int year;
+	public:
+	DateClass(int m, int d, int y){
+		month = m;
+		day = d;
+		year = y;
+	}
+	setmonth(int m){
+    if(m>12){
+    	cout<<"please enter valid month : ";
+	}
+     
+     
+     else{
+     month=m;
+	  }
+	  }
+	  
+	getmonth(){
+	  	return month;
+	  }
+	  setday(int d){
+      day=d;
+     }
+     getday(){
+     	return day;
+	 }
+	 setyear(int y){   
+      year=y;
+
+      }
+      getyear(){
+      	return year;
+	  }
+	 displaydate(){
+	 	cout<<month<<" / "<<day<<" / "<<year;
+	 }
+	 
+	 
+	 
+	 
+	 
+	  
+	
+};
+
+int main(){
+	    int month;
+		int day;
+		int year;
+		cout<<"Enter Month :";
+		cin>>month;
+		cout<<"Enter Day :";
+		cin>>day;
+		cout<<"Enter Year :";
+		cin>>year;
+		
+		DateClass dat(month , day , year);
+		
+		dat.setmonth( month);
+		dat.getmonth();
+		dat.setday(day);
+		dat.getday();
+		dat.setyear(year);
+		dat.getyear();
+	dat.displaydate();
+		
+		
+	
+	return 0;
+}
